@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="temperature_units">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+    <string-array name="speed_units">
+        <item>kilometre per hour</item>
+        <item>miles per hour</item>
+        <item>metre per second</item>
+    </string-array>
+
+    <string-array name="threeValuesArray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="twoValuesArray">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="sub_details">
+        <item>Precipitation</item>
+        <item>Real Feel</item>
+        <item>Cloudiness</item>
+        <item>Wind</item>
+        <item>Humidity</item>
+        <item>UV Index</item>
+        <item>Pressure</item>
+        <item>Visibility</item>
+        <item>Sunrise Time</item>
+        <item>Sunset Time</item>
+        <item>Low Temp Time</item>
+        <item>High Temp Time</item>
+    </string-array>
+    <string-array name="sub_details_default">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="twelveValuesArray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/future_day_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:fontFamily="@font/ralewaysemibold"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/future_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/future_day_name"
+        app:layout_constraintLeft_toRightOf="@id/future_day_name"
+        app:layout_constraintRight_toLeftOf="@id/future_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/future_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/clear_weather_icon"
+        app:layout_constraintBottom_toBottomOf="@id/future_day_name"
+        app:layout_constraintRight_toLeftOf="@id/future_highLow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/future_highLow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/ralewaysemibold"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/future_day_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/testLayout"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/future_day_name">
+
+        <TextView
+            android:id="@+id/day_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewaysemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:id="@+id/precipProb_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/day_summary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Precipitation Probability"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/precipProb_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/precipProb_textView"
+            app:layout_constraintTop_toTopOf="@id/precipProb_textView"
+            app:layout_constraintBottom_toBottomOf="@id/precipProb_textView"
+            android:text="20%"
+            android:layout_marginLeft="30dp"
+            />
+
+        <TextView
+            android:id="@+id/precipType_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ralewaysemibold"
+            app:layout_constraintTop_toBottomOf="@id/precipProb_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Precipitation Type"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/precipType_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/precipType_textView"
+            app:layout_constraintBottom_toBottomOf="@id/precipType_textView"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            android:src="@drawable/precipitation"
+            />
+
+        <TextView
+            android:id="@+id/highTempTime_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/precipType_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="High Temperature Time"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/highTempTime_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/highTempTime_textView"
+            app:layout_constraintBottom_toBottomOf="@id/highTempTime_textView"
+            android:text="4:00 pm"
+            />
+
+        <TextView
+            android:id="@+id/lowTempTime_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/highTempTime_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Low Temperature Time"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/lowTempTime_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/lowTempTime_textView"
+            app:layout_constraintBottom_toBottomOf="@id/lowTempTime_textView"
+            android:text="4:00 am"
+            />
+
+        <TextView
+            android:id="@+id/humidity_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lowTempTime_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Humidity"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/humidity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/humidity_textView"
+            app:layout_constraintBottom_toBottomOf="@id/humidity_textView"
+            android:text="35%"
+            />
+        <TextView
+            android:id="@+id/pressure_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/humidity_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Pressure"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/pressure_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/pressure_textView"
+            app:layout_constraintBottom_toBottomOf="@id/pressure_textView"
+            android:text="1000hPa"
+            />
+        <TextView
+            android:id="@+id/uvIndex_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/pressure_textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Max UV Index"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/uvIndex_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/precipProb_value"
+            app:layout_constraintRight_toRightOf="@id/precipProb_value"
+            app:layout_constraintTop_toTopOf="@id/uvIndex_textView"
+            app:layout_constraintBottom_toBottomOf="@id/uvIndex_textView"
+            android:text="11"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

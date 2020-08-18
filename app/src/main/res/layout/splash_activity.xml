@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_app_logo"
+        android:layout_marginBottom="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/permission_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_logo"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/permissions_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Permission Needed:"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_below="@id/permissions_textview"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/location_icon" />
+
+        <TextView
+            android:id="@+id/location_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/permissions_textview"
+            android:layout_alignTop="@id/location_icon"
+            android:layout_alignBottom="@id/location_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/location_icon"
+            android:layout_toLeftOf="@id/allow_location_access_button"
+            android:fontFamily="@font/ralewayregular"
+            android:gravity="left|center"
+            android:text="Access Location"
+            android:textColor="@color/grey"
+            android:textSize="15sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allow_location_access_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/tick_icon"
+            app:iconTint="@color/green"
+            android:textColor="@color/green"
+            android:layout_alignTop="@id/location_permission"
+            android:layout_alignBottom="@id/location_permission"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:fontFamily="@font/ralewaybold"
+            android:text="Allow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/internet_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/permission_layout"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/internet_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="Internet is off:"
+            android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/internet_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_below="@id/internet_textview"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/internet_icon" />
+
+
+        <TextView
+            android:id="@+id/turn_ON_Internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/internet_textview"
+            android:layout_alignTop="@id/internet_icon"
+            android:layout_alignBottom="@id/internet_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/internet_icon"
+            android:layout_toLeftOf="@id/internet_ON_button"
+            android:gravity="left|center"
+            android:fontFamily="@font/ralewayregular"
+            android:text="Turn ON Internet"
+            android:textColor="@color/grey"
+            android:textSize="15sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/internet_ON_button"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/turn_ON_Internet"
+            android:layout_alignBottom="@id/turn_ON_Internet"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            app:icon="@drawable/tick_icon"
+            app:iconTint="@color/green"
+            android:textColor="@color/green"
+            android:fontFamily="@font/ralewaybold"
+            android:text="DONE" />
+    </RelativeLayout>
+</RelativeLayout>

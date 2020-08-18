@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Units" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/temperature_units"
+        android:entryValues="@array/twoValuesArray"
+        android:key="temp_units"
+        android:summary="Select units for temperature"
+        android:title="Temperature" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/speed_units"
+        android:entryValues="@array/threeValuesArray"
+        android:key="speed_units"
+        android:summary="Select units for Speed"
+        android:title="Speed" />
+
+    <PreferenceCategory android:title="Details" />
+
+    <MultiSelectListPreference
+    android:defaultValue="@array/sub_details_default"
+    android:dialogTitle="Select 3 details"
+    android:entries="@array/sub_details"
+    android:entryValues="@array/twelveValuesArray"
+    android:key="sub_details"
+    android:summary="Select sub details to display"
+    android:title="Sub Details" />
+
+    <PreferenceCategory android:title="@string/info">
+        <Preference
+            android:title="@string/about"
+            android:key="@string/about"
+            />
+        <Preference
+            android:title="@string/recommend"
+            android:key="@string/recommend"
+            android:summary="Share the app with friends and family."
+            />
+        <Preference
+            android:key="@string/feedback"
+            android:title="@string/feedback"
+            android:summary="Suggest ideas,improvements or report bugs. "/>
+        <Preference
+            android:key="@string/rate"
+            android:title="@string/rate"
+            android:summary="Review the app on Google Play Store"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/stuff">
+    <Preference
+        android:title="@string/privacyPolicy"
+        android:key="@string/privacyPolicy"/>
+    <Preference
+        android:key="@string/termsAndConditions"
+        android:title="@string/termsAndConditions" />
+    </PreferenceCategory>
+</PreferenceScreen>
