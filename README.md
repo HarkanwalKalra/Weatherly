@@ -1,6 +1,6 @@
 # Weatherly
 
-Provides weather details and forecast based on current location. Search for differect cities using `Google Location API`. Get accurate weather details and forecast using `Dark Sky API`.
+Provides weather details and forecast based on current location. Search for different cities using `Google Location API`. Get accurate weather details and forecast using `Dark Sky API`.
 
 <img src = "images/night.jpeg" height = 400> <img src = "images/bottom.jpeg" height = 400>  <img src = "images/moredetails.jpeg" height = 400> <img src = "images/search.jpeg" height = 400>
 
